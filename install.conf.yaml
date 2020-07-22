@@ -9,3 +9,9 @@
     ~/.zshrc: zshrc
 
 
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+
+
