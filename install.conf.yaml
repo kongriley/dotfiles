@@ -7,11 +7,12 @@
     ~/.gitconfig: gitconfig
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
-
-
-- clean: ['~']
-
-- link:
     ~/.vimrc: vimrc
 
-
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [sudo apt-get install zsh, Installing zsh]
+    - [sudo git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh, Cloning Oh My Zsh]
+    - [sudo chsh -s $(which zsh), Making zsh the default shell]
+    - [zsh]
+    - [sudo git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k, Installing powerlevel10k] 
