@@ -107,3 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+co() { g++ -std=c++17 -O2 -o $1 $1.cpp -Wall -Wextra; }
+
+run() { co $1 && ./$1 & fg; }
