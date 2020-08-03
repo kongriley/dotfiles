@@ -45,6 +45,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
+#  . "/home/kongriley/.local/share/lscolors.sh"
+
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
@@ -106,8 +108,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+
+source $(dirname $(gem which colorls))/tab_complete.sh
+source ~/.nvm/nvm.sh
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 co() { g++ -std=c++17 -O2 -o $1 $1.cpp -Wall -Wextra; }
-
 run() { co $1 && ./$1 & fg; }
+
+vault() { cd /mnt/c/Users/Riley\ Kong/Documents/riley-vault; }
